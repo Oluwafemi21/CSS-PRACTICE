@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    height: 60px;
+    padding: 5px 80px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu,
+.close {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Nav style for desktop view */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: palevioletred;
+}
+
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.active-link {
+    color: palevioletred;
+}
+
+.hidden,
+.menu {
+    display: none;
+}
+
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width:500px) {
+    header {
+        padding-inline: 25px;
+    }
+
+    /* Nav style for mobile view */
+    nav {
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        gap: 25px;
+        transition: left 0.25s;
+    }
+
+    .menu {
+        display: block;
+    }
+}

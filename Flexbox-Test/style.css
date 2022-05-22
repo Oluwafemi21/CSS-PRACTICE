@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav{
+    background-color: #333;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+nav a:hover{
+    background-color: #555;
+}
+
+
+@media screen and (min-width:768px){
+
+    nav ul{
+        display: flex;
+    }
+    
+    nav li{
+        flex: 1 1 0;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

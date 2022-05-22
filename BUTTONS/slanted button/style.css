@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-btn {
+    display: flex;
+    gap: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 128px;
+    transition: all 0.25s;
+}
+
+.login-btn:hover {
+    background: white;
+    gap: 0;
+}
+
+.login-btn:hover button::after {
+    display: none;
+}
+
+.login-btn:hover .login {
+    border-bottom-right-radius: 0px;
+    width: 100%;
+}
+
+.login-btn:hover .icon {
+    border-top-left-radius: 0px;
+    width: 55px;
+}
+
+button {
+    height: 35px;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 2;
+}
+
+button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: -1px;
+    border: 1px solid blue;
+    z-index: 1;
+    transform: skew(-25deg);
+}
+
+.login {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 4px;
+    font-weight: 500;
+    padding: 0 15px;
+    width: 70%;
+}
+
+.login:after {
+    background-color: white;
+    border-left: none;
+    right: -8px;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.icon {
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 0px;
+    padding: 0 8px;
+    width: 35px;
+}
+
+.icon::after {
+    background-color: blue;
+    border-right: none;
+    left: -8px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 15px;
+}

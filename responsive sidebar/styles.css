@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic');
+
+:root {
+    --active-link: #06BA63;
+    --bg: #011627;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+a {
+    all: unset;
+    width: 100%;
+    cursor: pointer;
+}
+
+aside {
+    position: fixed;
+    height: 100%;
+    background-color: var(--bg);
+    color: white;
+    padding: 20px 10px;
+    gap: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: width 0.25s linear;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .bx {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+li {
+    width: 100%;
+}
+
+a {
+    padding: 8px 0 8px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    transition: all 0.25s linear
+}
+
+i {
+    font-size: 20px;
+}
+
+.active,
+a:hover {
+    background-color: var(--active-link);
+}
+
+.logout:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+main {
+    flex: 1;
+    margin-left: 200px;
+    display: grid;
+    place-content: center;
+    color: #011627;
+    text-align: center;
+    z-index: -1;
+}
+
+h1 span {
+    color: darkred;
+}
+
+a:hover .tool-tip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.tool-tip {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+    border-radius: 4px;
+    padding: 6px;
+    position: absolute;
+    z-index: 3;
+    min-width: 45px;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 45px;
+    left: 0px;
+    transition: opacity 0.5s;
+}
+
+
+@media (max-width:1024px) {
+    aside {
+        width: 55px;
+        padding-inline: 5px;
+    }
+
+    a {
+        padding-inline: 0;
+        text-align: center;
+    }
+
+    .tool-tip {
+        display: initial;
+    }
+
+    header .bx {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    i {
+        text-align: center;
+        font-size: 25px;
+        width: 50px;
+        justify-self: center;
+    }
+
+    aside a span,
+    header h4 {
+        display: none;
+    }
+
+    main {
+        margin-left: 55px;
+    }
+
+    aside.open {
+        width: 200px;
+        padding-inline: 10px;
+        z-index: 5;
+    }
+
+    aside.open a {
+        padding-inline: 5px 0;
+    }
+
+    aside.open a span,
+    aside.open header h4 {
+        display: inline-block;
+    }
+
+    aside.open i {
+        font-size: 20px;
+        width: auto;
+    }
+
+    aside.open .tool-tip {
+        display: none;
+    }
+
+}

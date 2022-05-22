@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Sidebar</title>
+</head>
+
+<body>
+    <aside>
+        <header>
+
+            <h4>Fexavier</h4>
+
+            <i class="bx bx-menu-alt-right" id="menu"></i>
+        </header>
+        <ul>
+            <li>
+                <a href="/" class="active">
+                    <i class="bx bx-home"></i>
+                    <span>Home</span>
+                    <div class="tool-tip">Home</div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <i class="bx bxs-dashboard"></i>
+                    <span>Dashboard</span>
+                    <div class="tool-tip">Dashboard</div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <i class='bx bxs-user'></i>
+                    <span>Account</span>
+                    <div class="tool-tip">Account</div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <i class='bx bxs-wallet-alt'></i>
+                    <span>Commerce</span>
+                    <div class="tool-tip">Commerce</div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <i class='bx bx-key'></i>
+                    <span>Passwords</span>
+                    <div class="tool-tip">Passwords</div>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <i class='bx bx-edit'></i>
+                    <span>Display</span>
+                    <div class="tool-tip">Display</div>
+                </a>
+            </li>
+        </ul>
+        <a href="/" class="logout">
+            <i class='bx bx-exit'></i>
+            <span>Logout</span>
+            <div class="tool-tip">Logout</div>
+        </a>
+    </aside>
+    <main>
+        <!-- <i class='bx bx-menu-alt-right'></i> -->
+        <h1>Fexavier <span>Codes</span></h1>
+    </main>
+
+    <script>
+        const menuBtn = document.querySelector('#menu');
+        const sidebar = document.querySelector('aside');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        })
+    </script>
+</body>
+
+</html>
