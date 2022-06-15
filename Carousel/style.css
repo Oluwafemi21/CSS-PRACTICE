@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    min-width: 80%;
+    margin-inline: auto;
+    gap: 25px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.carousel-card {
+    height: 200px;
+    min-width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 50px;
+    display: grid;
+    place-content: center;
+}
+
+.carousel-card.active {}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons span {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    display: block;
+    cursor: pointer;
+}
+
+.buttons span:hover {
+    opacity: 0.7;
+}
+
+span.active-cell {
+    background-color: black;
+}
+
+.navigator {
+    margin-top: 25px;
+    padding: 8px 20px;
+    font-size: 17px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}

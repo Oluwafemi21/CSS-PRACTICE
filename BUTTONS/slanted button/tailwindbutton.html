@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        green: '#35C801'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        button{
+            @apply cursor-pointer text-center rounded-lg
+            bg-green border border-green relative pointer-events-auto
+            z-20 h-9 text-white text-sm font-semibold
+         after:block after:absolute after:w-4 after:h-9 after:-top-px after:rounded after:z-10 after:border after:border-green after:-skew-x-[25deg] group-hover:after:hidden
+         group-hover:bg-transparent group-hover:text-green
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-3xl pt-6 font-bold underline text-center text-green">
+        Slanted Button with TailwindCss
+    </h1>
+
+    <div class="flex justify-center transition  rounded-lg group
+     w-32 mx-auto mt-20 gap-5 hover:gap-0 hover:bg-white hover:transition-all duration-200 ease
+     
+    ">
+        <button class="
+        w-24
+        uppercase
+        rounded-tr-none
+        font-bold
+        after:bg-green
+        after:border-l-0
+        after:-right-2
+        after:rounded-tl-none
+        after:rounded-bl-none
+        group-hover:rounded-br-none
+        group-hover:w-full
+        group-hover:border-r-0
+        ">
+            Join
+        </button>
+
+        <button class="
+        w-11
+        p-1
+        rounded-tl-2
+        rounded-bl-none
+        after:bg-green
+        after:pb
+        after:border-r-none
+        after:-left-2
+        after:rounded-tr-none
+        after:rounded-br-none
+        group-hover:rounded-tl-none
+        group-hover:border-l-0
+        ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 -rotate-45 z-20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </button>
+    </div>
+</body>
+
+</html>
